@@ -1,0 +1,44 @@
+/* ─── CSS Custom Properties ──────────────────────────────────────────────── */
+:root {
+  --ink: #0a0a0f;
+  --ink-muted: #6b6b7a;
+  --paper: #f5f3ee;
+  --paper-2: #eeebe3;
+  --card: #ffffff;
+  --border: #d4d0c8;
+  --accent: #e84b3a;
+  --accent-hover: #d03528;
+  --accent2: #2563eb;
+  --muted: #6b6b7a;
+
+  /* Priority */
+  --critical: #dc2626;
+  --high: #ea580c;
+  --medium: #ca8a04;
+  --low: #16a34a;
+
+  /* Status badges */
+  --badge-open-bg: #dbeafe;
+  --badge-open-fg: #1d4ed8;
+  --badge-progress-bg: #fef3c7;
+  --badge-progress-fg: #b45309;
+  --badge-resolved-bg: #d1fae5;
+  --badge-resolved-fg: #065f46;
+  --badge-closed-bg: #f1f5f9;
+  --badge-closed-fg: #475569;
+
+  /* Sidebar */
+  --sidebar-bg: #09090e;
+  --sidebar-fg: #a1a1ae;
+  --sidebar-active: #e84b3a;
+  --sidebar-width: 200px;
+
+  /* Topbar */
+  --topbar-height: 56px;
+
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --transition: 150ms ease;
+}

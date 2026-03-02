@@ -1,0 +1,13 @@
+/* ─── Dark Mode Overrides ─────────────────────────────────────────────────── */
+html.dark {
+    --ink: #e8e8f0;
+    --ink-muted: #9090a0;
+    --paper: #0d0d14;
+    --paper-2: #13131e;
+    --card: #1a1a28;
+    --border: #2a2a3a;
+    --muted: #9090a0;
+    --sidebar-bg: #07070d;
+    --shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
