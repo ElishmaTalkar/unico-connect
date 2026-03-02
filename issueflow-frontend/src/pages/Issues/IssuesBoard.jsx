@@ -16,6 +16,7 @@ import { updateIssue } from '../../api/issues.api';
 import { KanbanColumn } from './KanbanColumn';
 import { IssueCard } from './IssueCard';
 import { IssueModal } from './IssueModal';
+import { IssueDetailModal } from './IssueDetailModal';
 import { Button } from '../../components/ui/Button';
 import { Plus } from 'lucide-react';
 import { useToast } from '../../context/ToastContext';
@@ -34,7 +35,8 @@ export const IssuesBoard = () => {
 
     const [activeId, setActiveId] = useState(null);
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-    const [selectedIssue, setSelectedIssue] = useState(null);
+    const [viewingIssue, setViewingIssue] = useState(null);
+    const [editingIssue, setEditingIssue] = useState(null);
 
     const sensors = useSensors(
         useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -129,7 +131,7 @@ export const IssuesBoard = () => {
                                 id={col.id}
                                 title={col.title}
                                 issues={columnsWithIssues[col.id]}
-                                onEdit={(issue) => setSelectedIssue(issue)}
+                                onView={(issue) => setViewingIssue(issue)}
                             />
                         </SortableContext>
                     ))}
@@ -141,17 +143,28 @@ export const IssuesBoard = () => {
             </DndContext>
 
             <IssueModal
-                isOpen={isCreateModalOpen || !!selectedIssue}
+                isOpen={isCreateModalOpen || !!editingIssue}
                 onClose={() => {
                     setIsCreateModalOpen(false);
-                    setSelectedIssue(null);
+                    setEditingIssue(null);
                 }}
                 wsId={wsId}
-                initialData={selectedIssue}
+                initialData={editingIssue}
                 onSuccess={() => {
                     setIsCreateModalOpen(false);
-                    setSelectedIssue(null);
+                    setEditingIssue(null);
                     refetch();
+                }}
+            />
+
+            <IssueDetailModal
+                isOpen={!!viewingIssue}
+                onClose={() => setViewingIssue(null)}
+                wsId={wsId}
+                issue={viewingIssue}
+                onEdit={(issue) => {
+                    setViewingIssue(null);
+                    setEditingIssue(issue);
                 }}
             />
         </div>

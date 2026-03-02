@@ -1,0 +1,183 @@
+.issue-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.issue-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.issue-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.detail-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.detail-badges {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.edit-issue-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 4px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    margin-left: 0.5rem;
+}
+
+.edit-issue-btn:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.detail-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.meta-item-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.detail-section-title {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.detail-description-section {
+    padding: 1.25rem;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.detail-description-text {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.detail-comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comments-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.comment-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.comment-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.comment-meta {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+}
+
+.comment-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.comment-text {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.empty-comments {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    font-size: var(--font-size-sm);
+    margin: 1rem 0;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 80px;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    color: var(--color-text);
+    font-size: var(--font-size-md);
+    resize: vertical;
+    transition: all var(--transition-fast);
+}
+
+.comment-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.comment-form-actions {
+    display: flex;
+    justify-content: flex-end;
+}

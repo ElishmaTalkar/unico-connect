@@ -2,7 +2,7 @@ import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { IssueCard } from './IssueCard';
 
-export const KanbanColumn = ({ id, title, issues, onEdit }) => {
+export const KanbanColumn = ({ id, title, issues, onView }) => {
     const { setNodeRef, isOver } = useDroppable({
         id: id,
         data: {
@@ -31,7 +31,7 @@ export const KanbanColumn = ({ id, title, issues, onEdit }) => {
                         <IssueCard
                             key={issue.id}
                             issue={issue}
-                            onClick={() => onEdit(issue)}
+                            onClick={() => onView(issue)}
                         />
                     ))}
                 </SortableContext>
