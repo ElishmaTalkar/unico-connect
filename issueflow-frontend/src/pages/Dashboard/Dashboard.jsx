@@ -27,7 +27,7 @@ export const Dashboard = () => {
 
     const onSelectWorkspace = (ws) => {
         enterWorkspace(ws.id, ws);
-        navigate(`/workspace/${ws.id}/issues`);
+        navigate(`/workspace/${ws.id}`);
     };
 
     const onCreateWorkspace = async (data) => {

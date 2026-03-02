@@ -5,6 +5,7 @@ import { Login } from '../pages/Auth/Login';
 import { Signup } from '../pages/Auth/Signup';
 import { Layout } from '../components/layout/Layout';
 import { Dashboard } from '../pages/Dashboard/Dashboard';
+import { WorkspaceHome } from '../pages/Dashboard/WorkspaceHome';
 import { IssuesBoard } from '../pages/Issues/IssuesBoard';
 
 export const AppRoutes = () => {
@@ -17,6 +18,13 @@ export const AppRoutes = () => {
                 <ProtectedRoute>
                     <Layout>
                         <Dashboard />
+                    </Layout>
+                </ProtectedRoute>
+            } />
+            <Route path="/workspace/:wsId" element={
+                <ProtectedRoute>
+                    <Layout>
+                        <WorkspaceHome />
                     </Layout>
                 </ProtectedRoute>
             } />
