@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 
+import { Landing } from '../pages/Landing/Landing';
 import { Login } from '../pages/Auth/Login';
 import { Signup } from '../pages/Auth/Signup';
 import { Layout } from '../components/layout/Layout';
@@ -11,10 +12,11 @@ import { IssuesBoard } from '../pages/Issues/IssuesBoard';
 export const AppRoutes = () => {
     return (
         <Routes>
+            <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
 
-            <Route path="/" element={
+            <Route path="/dashboard" element={
                 <ProtectedRoute>
                     <Layout>
                         <Dashboard />
@@ -40,3 +42,4 @@ export const AppRoutes = () => {
         </Routes>
     );
 };
+

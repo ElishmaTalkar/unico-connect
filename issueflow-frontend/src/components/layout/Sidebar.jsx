@@ -30,7 +30,7 @@ export const Sidebar = () => {
             <nav className="sidebar-nav">
                 <div className="nav-section">
                     <p className="nav-section-title">General</p>
-                    <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
+                    <NavLink to="/dashboard" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
                         <LayoutDashboard size={20} />
                         <span>Dashboard</span>
                     </NavLink>
